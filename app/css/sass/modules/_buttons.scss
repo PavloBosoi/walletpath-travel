@@ -1,0 +1,21 @@
+/* ===========================
+   Buttons
+   =========================== */
+.btn-all{
+    @include ptr(padding, 0 40);
+    @include ptr(height, 43);
+    @include ptr(line-height, 43);
+    @include ptr(font-size, 16);
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    border: 1px solid $color2;
+    color: $color1;
+    @include ptr(border-radius, 35);
+    text-transform: uppercase;
+    &:hover{
+        background-color: $color2;
+        color: #fff;
+        text-decoration: none;
+    }
+}

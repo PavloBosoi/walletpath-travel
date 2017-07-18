@@ -1,0 +1,114 @@
+/* ==|====================
+   Module/Global
+   ======================= */
+
+/*===titles===*/
+.title-main{
+    position: relative;
+    text-align: center;
+    font-family: $font1;
+    font-weight: bold;
+    @include ptr(margin,0 0 35);
+    color: #fff;
+    @include fluidFontSize(28px,56px,480px,1680px,72px,42px);
+    h1,h2,h3,h4{
+        font-weight: bold;
+    }
+}
+.title-section{
+    position: relative;
+    text-align: center;
+    font-family: $font1;
+    font-weight: bold;
+    @include ptr(margin,0 0 30);
+    color: $color1;
+    @include fluidFontSize(24px,48px,480px,1680px,52px,36px);
+    h1,h2,h3,h4{
+        font-weight: bold;
+    }
+}
+
+
+
+.form-s{
+    @include ptr(width,580);
+    margin: 0 auto;
+    font-size: 0;
+    line-height: 0;
+    letter-spacing: -7px;
+    input{
+        @include ptr(padding,25 30);
+        width: 50%;
+        @include ptr(height,60);
+        background-color: #fff;
+        @include fluidFontSize(14px,16px,480px,1680px,20px,15px);
+        border-radius: 0;
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+        margin: 0;
+        border: 1px solid transparent;
+        line-height: normal;
+        letter-spacing: normal;
+    }
+    .btn-form-s{
+        width: 50%;
+        @include ptr(height,60);
+        @include ptr(font-size, 16);
+        text-align: center;
+        display: inline-block;
+        font-weight: bold;
+        border: 1px solid $color2;
+        background-color: $color2;
+        color: #fff;
+        border-radius: 0;
+        padding: 0;
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
+        text-transform: uppercase;
+        letter-spacing: normal;
+        transition: $linear-f;
+        &:hover{
+            background-color: transparent;
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+    p{
+        color: #fff;
+        @include ptr(margin,20 0 0 0);
+        @include fluidFontSize(14px,16px,480px,1680px,20px,15px);
+        letter-spacing: normal;
+        text-align: center;
+    }
+}
+
+/*===items===*/
+.overload-item{
+    @include ptr(padding,0 30 0 0);
+    position: relative;
+}
+.overload-icon{
+    @include ptr(margin,0 0 40 0);
+    position: relative;
+}
+.instruction-parent{
+    counter-reset: counter-instruction;
+}
+.instruction-parent .overload-increment::before {
+    content: counter(counter-instruction, decimal-leading-zero);
+    counter-increment: counter-instruction;
+    color: $color2;
+    @include fluidFontSize(14px,16px,480px,1680px,20px,15px);
+}
+.overload-increment{
+    @include ptr(margin,0 0 25 0);
+}
+.overload-title{
+    @include fluidFontSize(16px,24px,480px,1680px,28px,19px);
+    font-weight: bold;
+    color: $color1;
+    @include ptr(margin,0 0 15 0);
+    h2,h3,h4{
+        font-weight: bold;
+    }
+}
