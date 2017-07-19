@@ -4,7 +4,7 @@
 .btn-all{
     @include ptr(padding, 0 40);
     @include ptr(height, 43);
-    @include ptr(line-height, 43);
+    @include ptr(line-height, 41);
     @include ptr(font-size, 16);
     text-align: center;
     display: inline-block;

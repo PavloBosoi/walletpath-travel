@@ -3,8 +3,34 @@
    ======================= */
 
 .footer {
-/*    margin: -140px auto 0;
-    height: 140px;
-    background: #BFF08E;
-    position: relative;*/
+    margin: -380px auto 0;
+    height: 380px;
+    @include ptr(padding, 40 0 20);
+    background: $color1;
+    position: relative;
+    overflow: hidden;
+}
+.menu-footer{
+    li{
+        @include ptr(margin, 0 0 25);
+        @include ptr(padding, 0 0 0 30);
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            @include ptr(top, 12);
+            left: 0;
+            height: 1px;
+            @include ptr(width, 18);
+            background-color: #424242;
+        }
+        a{
+            @include fluidFontSize(14px,18px,480px,1680px,22px,16px);
+            color: #fff;
+        }
+    }
+}
+.copy{
+    @include ptr(margin, 50 0 0 0);
+    text-align: center;
 }
