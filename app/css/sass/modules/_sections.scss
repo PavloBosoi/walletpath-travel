@@ -282,11 +282,24 @@
 .account-text-block{
     display: flex;
     flex-wrap: wrap;
+    @include ptr(margin, 50 0 0 0);
+    &:first-child{
+        margin: 0;
+    }
+    a{
+        display: inline-block;
+        text-decoration: underline;
+        color: $color2;
+        &:hover{
+            text-decoration: none;
+        }
+    }
 }
 .account-text-row{
     width: 50%;
-    @include ptr(margin, 0 0 50 0);
-    &:last-child{
+    @include ptr(margin, 50 0 0 0);
+    &:first-child,
+    &:nth-child(2){
         margin: 0;
     }
     span{
@@ -300,15 +313,6 @@
     p{
         @include ptr(margin, 0 0 5 0);
     }
-    a{
-        display: inline-block;
-        @include ptr(margin, 15 0 0 0);
-        text-decoration: underline;
-        color: $color2;
-        &:hover{
-            text-decoration: none;
-        }
-    }
 }
 .account-text-trow{
     width: 100%;
@@ -316,4 +320,10 @@
 .account-text-column{
     columns: 2;
     column-gap: 30px;
+}
+.account-blink{
+    @include ptr(margin, 40 0 0 0);
+}
+.account-slink{
+    @include ptr(margin, 10 0 0 0);
 }
