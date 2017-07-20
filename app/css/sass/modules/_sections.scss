@@ -195,3 +195,125 @@
     color: $color3;
     @include ptr(margin, 0 0 25 0);
 }
+
+
+
+/*===ACCOUNT===*/
+/*===Account-Settings===*/
+.form-account{
+    input[type="submit"]{
+        line-height: 0;
+    }
+    textarea{
+        @include ptr(height, 60);
+        @include ptr(padding,10 30);
+        @include ptr(margin, 0 0 40 0);
+    }
+}
+.form-account-input{
+    label{
+        display: block;
+        position: relative;
+        span{
+            position: absolute;
+            @include ptr(top, -25);
+            left: 0;
+            text-transform: uppercase;
+            font-weight: bold;
+            @include fluidFontSize(12px,14px,480px,1680px,18px,13px);
+        }
+    }
+}
+.form-account-radio{
+    position: relative;
+    @include ptr(margin, 30 0 30 0);
+    p{
+        display: block;
+        position: absolute;
+        @include ptr(top, -35);
+        left: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        @include fluidFontSize(12px,14px,480px,1680px,18px,13px);
+    }
+    label{
+        @include ptr(margin, 0 35 0 0);
+        display: inline-block;
+        &:last-child{
+            margin: 0;
+        }
+    }
+    .jq-radio,
+    span{
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.form-account-select-input{
+    display: flex;
+    align-items: flex-end;
+    margin: 0 -15px;
+    label{
+        display: block;
+        position: relative;
+        @include ptr(margin, 0 0 40 0);
+        width: 33.3333%;
+        margin-left: 15px;
+        margin-right: 15px;
+        span{
+            position: absolute;
+            @include ptr(top, -25);
+            left: 0;
+            text-transform: uppercase;
+            font-weight: bold;
+            @include fluidFontSize(12px,14px,480px,1680px,18px,13px);
+        }
+        input,
+        select{
+            margin: 0;
+        }
+    }
+}
+
+.account-text-space{
+    @include ptr(padding, 0 0 0 30);
+}
+.account-text-block{
+    display: flex;
+    flex-wrap: wrap;
+}
+.account-text-row{
+    width: 50%;
+    @include ptr(margin, 0 0 50 0);
+    &:last-child{
+        margin: 0;
+    }
+    span{
+        text-transform: uppercase;
+        font-weight: bold;
+        @include fluidFontSize(12px,14px,480px,1680px,18px,13px);
+        color: #a5a5a5;
+        display: block;
+        @include ptr(margin, -6 0 5 0);
+    }
+    p{
+        @include ptr(margin, 0 0 5 0);
+    }
+    a{
+        display: inline-block;
+        @include ptr(margin, 15 0 0 0);
+        text-decoration: underline;
+        color: $color2;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+.account-text-trow{
+    width: 100%;
+}
+.account-text-column{
+    columns: 2;
+    column-gap: 30px;
+}

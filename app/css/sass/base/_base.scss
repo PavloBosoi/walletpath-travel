@@ -47,14 +47,19 @@ input,
 textarea{
     width: 100%;
     @include ptr(height,60);
-    @include ptr(padding,10 15);
-    @include ptr(margin, 0 0 20 0);
+    @include ptr(padding,20 30);
+    @include ptr(margin, 0 0 40 0);
     @include ptr(border-radius,2);
-    border: 1px solid #e1e1e1;
-    background-color: #e1e1e1;
-    color: #2c2c2c;
+    border: 1px solid #dedede;
+    background-color: #fff;
+    color: $color1;
     font-family: $font1;
-    @include fluidFontSize(16px,24px,480px,1680px,28px,18px);
+    @include fluidFontSize(14px,16px,480px,1680px,20px,15px);
+    transition: $linear-f;
+    &:focus{
+        border: 1px solid $color2;
+        box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.15);
+    }
 }
 input[type="submit"]{
     font-family: $font1;

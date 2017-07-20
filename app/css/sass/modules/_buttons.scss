@@ -1,7 +1,7 @@
 /* ===========================
    Buttons
    =========================== */
-.btn-all{
+.btn-empty{
     @include ptr(padding, 0 40);
     @include ptr(height, 43);
     @include ptr(line-height, 41);
@@ -16,6 +16,24 @@
     &:hover{
         background-color: $color2;
         color: #fff;
+        text-decoration: none;
+    }
+}
+
+.btn-all{
+    @include ptr(width, 180);
+    @include ptr(height, 60);
+    @include ptr(line-height, 58);
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    border: 1px solid $color2;
+    color: #fff;
+    @include ptr(border-radius, 35);
+    text-transform: uppercase;
+    &:hover{
+        background-color: transparent;
+        color: $color2;
         text-decoration: none;
     }
 }

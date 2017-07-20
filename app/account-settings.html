@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    //= template/head.html
+    <body class="main-page">
+
+        <div class="wrapper">
+            //= template/header(menu).html
+            <main class="content deep">
+
+                <div class="container">
+                    <div class="title-page">
+                        <h1>Account Settings</h1>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full-width">
+                            <div class="form-account">
+                                <form action="#" method="post">
+                                    <div class="form-account-input">
+                                        <label><span>First Name</span><input type="text"></label>
+                                        <label><span>Last Name</span><input type="text"></label>
+                                    </div>
+                                    <div class="form-account-textarea">
+                                        <label><textarea placeholder="E-mail(only enter email if you want to change the email address on your subscription)"></textarea></label>
+                                        <label><textarea placeholder="Phone(only enter phone number if you want text message alerts)"></textarea></label>
+                                    </div>
+                                    <div class="form-account-radio">
+                                        <p>Text Message Alerts</p>
+                                        <label><input name="alert-message" type="radio"><span>On</span></label>
+                                        <label><input name="alert-message" type="radio"><span>Off</span></label>
+                                    </div>
+                                    <div class="form-account-input">
+                                        <label><input type="text" placeholder="New Password"></label>
+                                        <label><input type="text" placeholder="Re-enter Password"></label>
+                                    </div>
+                                    <input class="btn-all" type="submit" value="SAVE CHANGES">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full-width">
+                            <div class="account-text-space">
+                                <div class="account-text">
+                                    <div class="account-text-block">
+                                        <div class="account-text-row">
+                                            <span>Subscription plan:</span>
+                                            <p>Quarterly</p>
+                                        </div>
+                                        <div class="account-text-row">
+                                            <span>Premium member since:</span>
+                                            <p>June 21st, 2017</p>
+                                        </div>
+                                        <div class="account-text-row">
+                                            <span>Payment method:</span>
+                                            <p>Credit Card</p>
+                                        </div>
+                                        <div class="account-text-row">
+                                            <span>Subscription terms:</span>
+                                            <p>$15 every 3 months</p>
+                                        </div>
+                                        <a href="#">Update billing</a>
+                                    </div>
+
+                                    <div class="account-text-block">
+                                        <div class="account-text-row account-text-trow">
+                                            <span>Departure cities:</span>
+                                            <div class="account-text-column">
+                                                <p>Fort-de-France (FDF)</p>
+                                                <p>Anguilla (AXA)</p>
+                                                <p>Antigua (ANU)</p>
+                                                <p>Atlanta (ATL)</p>
+                                                <p>Birmingham (BHM)</p>
+                                                <p>Charleston (CHS)</p>
+                                                <p>Charlotte (CLT)</p>
+                                                <p>Chattanooga (CHA)</p>
+                                            </div>
+                                        </div>
+                                        <a href="#">Change Departure Cities</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+            <!-- .content -->
+        </div>
+        <!-- .wrapper -->
+        //= template/footer.html
+    </body>
+</html>

@@ -24,7 +24,7 @@ $(function(){
 
 
     //formstyler
-    $('select').styler();
+    $('input,select').styler();
 
     //btn-menu
     btnMenu.on('click', function(e){
