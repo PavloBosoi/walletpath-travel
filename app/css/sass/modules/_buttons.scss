@@ -37,3 +37,141 @@
         text-decoration: none;
     }
 }
+
+
+.prevnext-links{
+    text-align: center;
+    @include ptr(margin, 90 0 0 0);
+}
+.prev-link{
+    @include ptr(font-size, 16);
+    @include ptr(margin, 0 4 0 0);
+    @include ptr(width, 170);
+    @include ptr(height, 60);
+    @include ptr(line-height, 58);
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    border: 1px solid #dedede;
+    color: $color1;
+    @include ptr(border-radius, 35);
+    text-transform: uppercase;
+    &:hover{
+        background-color: $color2;
+        border: 1px solid $color2;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+.next-link{
+    @include ptr(font-size, 16);
+    @include ptr(margin, 0 0 0 4);
+    @include ptr(width, 170);
+    @include ptr(height, 60);
+    @include ptr(line-height, 58);
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    border: 1px solid $color2;
+    background-color: $color2;
+    color: #fff;
+    @include ptr(border-radius, 35);
+    text-transform: uppercase;
+    &:hover{
+        background-color: transparent;
+        color: $color2;
+        text-decoration: none;
+    }
+}
+
+
+
+.btn-menu{
+    display: none;
+    position: absolute;
+    @include ptr(top,45);
+    @include ptr(right,15);
+    overflow: hidden;
+    padding: 0;
+    width: 25px;
+    height: 20px;
+    margin: 0;
+    font-size: 0;
+    text-indent: -9999px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    z-index: 12;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-menu:focus {
+    outline: none;
+}
+
+.btn-menu i {
+    display: block;
+    position: absolute;
+    top: 9px;
+    left: 0px;
+    right: 0px;
+    height: 1px;
+    background: $color2;
+    transition: background 0.3s;
+}
+
+.btn-menu i::before,
+.btn-menu i::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $color2;
+    content: "";
+    transition-delay: .3s, 0s;
+    transition-duration: 0.3s, 0.3s;
+}
+
+.btn-menu i::before {
+    top: -8px;
+    -webkit-transition-property: top, -webkit-transform;
+    transition-property: top, transform;
+}
+
+.btn-menu i::after {
+    bottom: -8px;
+    -webkit-transition-property: bottom, -webkit-transform;
+    transition-property: bottom, transform;
+}
+
+/* активное состояние, т.е. меню открыто */
+.btn-menu.active i{
+    background: none;
+    width: 100%;
+}
+
+.btn-menu.active i::before {
+    top: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.btn-menu.active i::after {
+    bottom: 0;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.btn-menu.active i::before,
+.btn-menu.active i::after {
+    -webkit-transition-delay: 0s, 0.3s;
+    transition-delay: 0s, 0.3s;
+    background-color: $color1;
+}

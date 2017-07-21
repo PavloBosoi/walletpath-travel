@@ -10,6 +10,13 @@
     .proposals-item{
         @include ptr(height, 400);
     }
+    .menu{
+        ul{
+            li{
+                @include ptr(font-size, 15);
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 1366px) {
@@ -23,7 +30,24 @@
 }
 
 @media only screen and (max-width: 1200px) {
-
+    .header-deep{
+        @include ptr(padding, 20 15);
+    }
+    .menu{
+        ul{
+            li{
+                @include ptr(padding, 0 17);
+            }
+        }
+    }
+    .form-account{
+        textarea{
+            @include ptr(height, 100);
+        }
+    }
+    .btn-all{
+        width: auto;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -33,18 +57,106 @@
     .proposals-item{
         @include ptr(height, 350);
     }
+    .login{
+        margin-right: 40px;
+    }
+    .menu > ul{
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: $color2;
+        @include ptr(width, 0);
+        @include ptr(padding, 100 0 0);
+        height: 100%;
+        z-index: 11;
+        margin: 0;
+        overflow: hidden;
+        transition: $linear-f;
+    }
+    .btn-menu{
+        display: block;
+        &.active{
+            &+ul{
+                opacity: 1;
+                @include ptr(width, 450);
+                &::before{
+                    display: none;
+                }
+            }
+        }
+    }
+    .menu > ul > li{
+        width: 100%;
+        @include ptr(padding, 20 50 0);
+        @include ptr(margin, 0 0 20);
+    }
+    .menu > ul > li > a{
+        color: #fff;
+        height: auto;
+        display: inline-block;
+        font-size: 22px;
+        line-height: 26px;
+        padding: 0;
+        white-space: nowrap;
+    }
+    .account-text-space{
+        padding: 0;
+    }
+    .form-account-select-input{
+        flex-wrap: wrap;
+        label{
+            width: calc(50% - 30px);
+            &:last-child{
+                width: 100%;
+            }
+        }
+    }
     html {
         font-size: 8px;
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px){
     .feature-parent{
         span{
             width: 33.3333%;
             text-align: center;
             @include ptr(margin, 20 0);
         }
+    }
+    .account-text-row:nth-child(2){
+        @include ptr(margin, 50 0 0 0);
+    }
+    .account-text-row{
+        width: 100%;
+    }
+    .account-text-column {
+        columns: 1;
+    }
+    .form-account-select-input{
+        flex-wrap: wrap;
+        margin: 0 -7px;
+        label{
+            width: calc(50% - 14px);
+            margin-left: 7px;
+            margin-right: 7px;
+            &:last-child{
+                width: 100%;
+            }
+        }
+    }
+    .jq-selectbox__select-text{
+        @include ptr(padding, 0 20 0 0);
+    }
+    .jq-selectbox__trigger{
+        @include ptr(right, 10);
+    }
+    .form-search-checkbox-block{
+        width: 50%;
+        @include ptr(margin, 0 0 20 0);
     }
 }
 
@@ -56,6 +168,12 @@
         width: 100%;
         text-align: center;
         @include ptr(margin, 0 0 40);
+    }
+    .header-deep{
+        .logo{
+            width: auto;
+            margin: 0;
+        }
     }
     .form-s{
         @include ptr(width, 500);
@@ -74,10 +192,16 @@
     .proposals-item{
         @include ptr(padding, 15);
     }
+    .form-search-checkbox-block{
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 480px) {
     .full-s-width{
+        width: 100%;
+    }
+    .btn-menu.active + ul{
         width: 100%;
     }
     .feature-parent{
@@ -102,6 +226,35 @@
     }
     .copy{
         margin: 0;
+    }
+    .header-deep{
+        .h-block-parent{
+            justify-content: center;
+        }
+        .logo{
+            width: 100%;
+            text-align: center;
+            @include ptr(margin, 0 0 40);
+        }
+        .login{
+            margin: 0;
+        }
+        .menu{
+            padding: 0;
+        }
+    }
+    .title-block{
+        @include ptr(margin, 0 0 35 0);
+    }
+    .account-text-space{
+        @include ptr(margin, 50 0 0 0);
+    }
+    .form-account-input{
+        label{
+            span{
+                position: static;
+            }
+        }
     }
     .footer{
         height: 720px;

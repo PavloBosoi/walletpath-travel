@@ -44,11 +44,33 @@
     }
 }
 
+.title-spage{
+    @include fluidFontSize(15px,30px,480px,1680px,34px,22px);
+    position: relative;
+    text-align: center;
+    font-family: $font1;
+    font-weight: normal;
+    @include ptr(margin,0 0 40);
+    color: $color1;
+    h1,h2,h3,h4{
+        font-weight: normal;
+    }
+    p{
+        @include fluidFontSize(14px,16px,480px,1680px,20px,15px);
+        @include ptr(margin,5 0 0);
+    }
+}
+.title-spage-left{
+    p{
+        text-align: left;
+    }
+}
+
 .title-block{
     position: relative;
     font-family: $font1;
     font-weight: normal;
-    @include ptr(margin,0 0 60);
+    @include ptr(margin,0 0 65);
     color: $color1;
     @include fluidFontSize(16px,24px,480px,1680px,28px,20px);
     h1,h2,h3,h4{
@@ -156,7 +178,7 @@
     @include fluidFontSize(14px,16px,480px,1680px,20px,15px);
 }
 .overload-increment{
-    @include ptr(margin,0 0 25 0);
+    @include ptr(margin,0 0 20 0);
 }
 .overload-title{
     @include fluidFontSize(16px,24px,480px,1680px,28px,19px);
@@ -205,7 +227,7 @@
 .jq-selectbox__select-text{
     width: 100% !important;
     @include ptr(padding, 0 35 0 0);
-    line-height: 60px;
+    @include ptr(line-height, 60);
 }
 .jq-selectbox__select:hover {
     background: none;
@@ -257,7 +279,6 @@
     color: #fff;
 }
 
-.jq-checkbox,
 .jq-radio{
     vertical-align: 0;
     width: 16px;
@@ -273,7 +294,6 @@
     @include ptr(height,30);
     border: 1px solid #dfdfdf;
 }
-.jq-checkbox.focused,
 .jq-radio.focused,
 .jq-radio.checked{
     border: 5px solid $color2;
@@ -286,4 +306,35 @@
     border-radius: 50%;
     background: $color2;
     box-shadow: none;
+}
+
+.jq-checkbox{
+    vertical-align: 0;
+    @include ptr(width,30);
+    @include ptr(height,30);
+    @include ptr(margin,0 10 0 0);
+    border: 1px solid #c3c3c3;
+    @include ptr(border-radius, 2);
+    background: none;
+    box-shadow: none;
+    cursor: pointer;
+    position: relative;
+    &.checked::before{
+        content: '\f00c';
+        position: absolute;
+        @include ptr(top,3);
+        @include ptr(left,3);
+        color: $color2;
+        font-family: FontAwesome;
+        @include ptr(font-size,22);
+    }
+    &.checked .jq-checkbox__div {
+        display: none;
+    }
+}
+.jq-checkbox.focused{
+    border: 1px solid #c3c3c3;
+}
+.jq-checkbox.checked{
+    border: 1px solid $color2;
 }

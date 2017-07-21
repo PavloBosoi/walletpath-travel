@@ -3,7 +3,7 @@
    ======================= */
 .header{
     background-color: #fff;
-    @include ptr(padding,20 50);
+    @include ptr(padding,20 0);
 }
 .h-block-parent{
     display: flex;
@@ -69,6 +69,7 @@
 /*===header-deep===*/
 .header-deep{
     border: 1px solid #dedede;
+    @include ptr(padding,20 50);
 }
 .menu{
     ul{

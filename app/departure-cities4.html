@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    //= template/head.html
+    <body class="main-page">
+
+        <div class="wrapper">
+            //= template/header(menu).html
+            <main class="content deep">
+
+                <div class="container">
+                    <div class="title-page">
+                        <h2>Departure Cities</h2>
+                    </div>
+                    <div class="departure-cities">
+                        <div class="title-spage">
+                            <h2>USA - Midwest</h2>
+                            <p>Select all or individual airports in the Midwest</p>
+                        </div>
+                        <div class="form-search">
+                            <form action="#" method="post">
+                                <input type="text" placeholder="Search Cities...">
+                                <div class="form-search-checkbox">
+                                    <div class="form-search-checkbox-block">
+                                        <label class="checkbox-low"><input type="checkbox">Cedar Rapids (CID) -&nbsp;<span>Low</span></label>
+                                        <label class="checkbox-medium"><input type="checkbox">Cincinnati (CVG) -&nbsp;<span>Medium</span></label>
+                                        <label class="checkbox-low"><input type="checkbox">Cedar Rapids (CID) -&nbsp;<span>Low</span></label>
+                                    </div>
+                                    <div class="form-search-checkbox-block">
+                                        <label class="checkbox-rare"><input type="checkbox">Cedar Rapids (CID) -&nbsp;<span>Low</span></label>
+                                        <label class="checkbox-high"><input type="checkbox">Cincinnati (CVG) -&nbsp;<span>Medium</span></label>
+                                        <label class="checkbox-low"><input type="checkbox">Cedar Rapids (CID) -&nbsp;<span>Low</span></label>
+                                    </div>
+                                    <div class="form-search-checkbox-block">
+                                        <label class="checkbox-low"><input type="checkbox">Cedar Rapids (CID) -&nbsp;<span>Low</span></label>
+                                        <label class="checkbox-all"><input type="checkbox">Select All</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="departure-table">
+                            <div class="title-block">
+                                <h3>Average deal frequency</h3>
+                            </div>
+                            <div class="departure-table-item departure-table-item-high">
+                                <span>High: </span><p>10+ deals per month</p>
+                            </div>
+                            <div class="departure-table-item departure-table-item-medium">
+                                <span>Medium: </span><p>3 - 9 deals per month</p>
+                            </div>
+                            <div class="departure-table-item departure-table-item-low">
+                                <span>Low: </span><p>1 - 2 deals per month</p>
+                            </div>
+                            <div class="departure-table-item departure-table-item-rare">
+                                <span>Rare: </span><p>0 - 1 deal per month</p>
+                            </div>
+                        </div>
+
+                        <div class="prevnext-links">
+                            <a href="#" class="prev-link">Previous</a>
+                            <a href="#" class="next-link">Next</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </main>
+            <!-- .content -->
+        </div>
+        <!-- .wrapper -->
+        //= template/footer.html
+    </body>
+</html>
