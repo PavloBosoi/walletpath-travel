@@ -397,7 +397,7 @@
     &::before{
         content: '';
         position: absolute;
-        @include ptr(top,11);
+        @include ptr(top,12);
         left: 0;
         height: 1px;
         @include ptr(width,16);

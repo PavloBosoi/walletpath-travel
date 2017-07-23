@@ -32,6 +32,72 @@ $(function(){
     });
 
 
+
+    //функция поиска совпадений вводимых символов
+    function findEl(el, value) {
+        var count = 0;
+        el.each(function(){
+            if($(this).data('address').match('^'+value)){//проверяем каждый елемент на совпадение побуквенно
+                $(this).show(100);
+                $(this).addClass('active');
+                count++;
+            }
+            else{
+                if(count > 1 && $(this).data('address') === 'all'){
+                    $(this).show(100);
+                }
+                else{
+                    $(this).hide(100);
+                    $(this).removeClass('active');
+                }
+            }
+        });
+    }
+
+    var filterInput = $('#filter-address'),
+        checkFilter = $('.js-checkfiltr');
+
+    checkFilter.filter(function(){
+        if($(this).data('address') !== 'all'){
+            $(this).addClass('active');
+        }
+    });
+
+//проверка при каждом вводе символа
+    filterInput.bind('input propertychange', function(){
+        if($(this).val() !== ''){
+            findEl(checkFilter,$(this).val());
+        }
+        else{
+            checkFilter.show(100);
+        }
+    });
+
+    checkFilter.on('click',function(){
+        if($(this).data('address') === 'all'){
+            if($(this).hasClass('active')){
+                $(this).removeClass('active');
+                $(this).find('span').text('Select All');
+                checkFilter.each(function(){
+                    if($(this).hasClass('active') && $(this).data('address') !== 'all'){
+                        $(this).find('input').prop('checked', false).trigger('refresh');
+                    }
+                });
+            }
+            else{
+                $(this).addClass('active');
+                $(this).find('span').text('Unselect All');
+                checkFilter.each(function(){
+                    if($(this).hasClass('active') && $(this).data('address') !== 'all'){
+                        $(this).find('input').prop('checked', true).trigger('refresh');
+                    }
+                });
+            }
+        }
+            //checkFilter.trigger('click');
+    });
+
+
     $(window).resize(function(){
         ScreenWidth = $(window).width();
         ScreenHeight = $(window).height();

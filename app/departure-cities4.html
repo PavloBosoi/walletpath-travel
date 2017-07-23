@@ -17,22 +17,24 @@
                             <p>Select all or individual airports in the Midwest</p>
                         </div>
                         <div class="form-search">
-                            <form action="#" method="post">
-                                <input type="text" placeholder="Search Cities...">
+                            <form id="filter-sidebar" action="#" method="post">
+                                <input id="filter-address" class="filter-select filter-tax" name="location" type="text" placeholder="Search Cities..."/>
+                                        <ul class="ul-addresses"></ul>
+
                                 <div class="form-search-checkbox">
                                     <div class="form-search-checkbox-block">
-                                        <label class="checkbox-low"><input type="checkbox">Cedar Rapids (CID) -&nbsp;<span>Low</span></label>
-                                        <label class="checkbox-medium"><input type="checkbox">Cincinnati (CVG) -&nbsp;<span>Medium</span></label>
-                                        <label class="checkbox-low"><input type="checkbox">Cedar Rapids (CID) -&nbsp;<span>Low</span></label>
+                                        <label data-address="cedar rapids" class="checkbox-low js-checkfiltr"><input type="checkbox">Cedar Rapids (CID) -&nbsp;<span>Low</span></label>
+                                        <label data-address="cincinnati" class="checkbox-medium js-checkfiltr"><input type="checkbox">Cincinnati (CVG) -&nbsp;<span>Medium</span></label>
+                                        <label data-address="cedar rapids" class="checkbox-low js-checkfiltr"><input type="checkbox">Cedar Rapids (CID) -&nbsp;<span>Low</span></label>
                                     </div>
                                     <div class="form-search-checkbox-block">
-                                        <label class="checkbox-rare"><input type="checkbox">Cedar Rapids (CID) -&nbsp;<span>Low</span></label>
-                                        <label class="checkbox-high"><input type="checkbox">Cincinnati (CVG) -&nbsp;<span>Medium</span></label>
-                                        <label class="checkbox-low"><input type="checkbox">Cedar Rapids (CID) -&nbsp;<span>Low</span></label>
+                                        <label data-address="cedar rapids" class="checkbox-rare js-checkfiltr"><input type="checkbox">Cedar Rapids (CID) -&nbsp;<span>Low</span></label>
+                                        <label data-address="cincinnati" class="checkbox-high js-checkfiltr"><input type="checkbox">Cincinnati (CVG) -&nbsp;<span>Medium</span></label>
+                                        <label data-address="cedar rapids" class="checkbox-low js-checkfiltr"><input type="checkbox">Cedar Rapids (CID) -&nbsp;<span>Low</span></label>
                                     </div>
                                     <div class="form-search-checkbox-block">
-                                        <label class="checkbox-low"><input type="checkbox">Cedar Rapids (CID) -&nbsp;<span>Low</span></label>
-                                        <label class="checkbox-all"><input type="checkbox">Select All</label>
+                                        <label data-address="cedar rapids" class="checkbox-low js-checkfiltr"><input type="checkbox">Cedar Rapids (CID) -&nbsp;<span>Low</span></label>
+                                        <label data-address="all" class="checkbox-all js-checkfiltr"><input type="checkbox"><span>Select All</span></label>
                                     </div>
                                 </div>
                             </form>
