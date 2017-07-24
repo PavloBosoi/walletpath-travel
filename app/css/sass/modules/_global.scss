@@ -56,7 +56,7 @@
         font-weight: normal;
     }
     p{
-        @include fluidFontSize(14px,16px,480px,1680px,20px,15px);
+        @include fluidFontSize(14px,16px,480px,1680px,26px,15px);
         @include ptr(margin,5 0 0);
     }
 }
@@ -152,7 +152,8 @@
     position: relative;
 }
 .overload-icon{
-    i{
+    width: 100%;
+    i,img{
         position: absolute;
         bottom: 0;
         left: 0;
@@ -320,13 +321,21 @@
     cursor: pointer;
     position: relative;
     &.checked::before{
-        content: '\f00c';
+        /*content: '\f00c';
         position: absolute;
         @include ptr(top,3);
         @include ptr(left,3);
         color: $color2;
         font-family: FontAwesome;
-        @include ptr(font-size,22);
+        @include ptr(font-size,22);*/
+        content: '';
+        position: absolute;
+        @include ptr(top,7);
+        @include ptr(left,5);
+        width: 18px;
+        height: 14px;
+        background: transparent url("../images/check.png") no-repeat scroll 0 0;
+
     }
     &.checked .jq-checkbox__div {
         display: none;

@@ -114,6 +114,10 @@
             }
         }
     }
+    .jq-checkbox.checked::before{
+        @include ptr(top,5);
+        @include ptr(left,3);
+    }
     html {
         font-size: 8px;
     }
@@ -185,7 +189,7 @@
     .overload-icon,
     .overload-img{
         text-align: center;
-        i{
+        i,img{
             position: static;
         }
     }
@@ -193,6 +197,9 @@
         @include ptr(padding, 15);
     }
     .form-search-checkbox-block{
+        width: 100%;
+    }
+    .form-tags{
         width: 100%;
     }
 }

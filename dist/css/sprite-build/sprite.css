@@ -16,6 +16,18 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 // HTML
 <i class="icon icon-home"></i>
 */
+.icon-check {
+  background-image: url(sprite.png);
+  background-position: -106px -52px;
+  width: 18px;
+  height: 14px;
+}
+.icon-close {
+  background-image: url(sprite.png);
+  background-position: -299px -225px;
+  width: 30px;
+  height: 30px;
+}
 .icon-feature1 {
   background-image: url(sprite.png);
   background-position: -55px -267px;
@@ -66,9 +78,15 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-instruction3 {
   background-image: url(sprite.png);
-  background-position: -75px -78px;
+  background-position: 0px -78px;
   width: 70px;
   height: 70px;
+}
+.icon-plus {
+  background-image: url(sprite.png);
+  background-position: -334px -225px;
+  width: 24px;
+  height: 24px;
 }
 .icon-save1 {
   background-image: url(sprite.png);
@@ -96,7 +114,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-save5 {
   background-image: url(sprite.png);
-  background-position: 0px -78px;
+  background-position: -75px -78px;
   width: 70px;
   height: 70px;
 }
