@@ -24,7 +24,7 @@ $(function(){
 
 
     //formstyler
-    $('input,select').styler();
+    $('input:not(:radio),select').styler();
 
     //btn-menu
     btnMenu.on('click', function(e){
