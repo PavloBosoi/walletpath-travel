@@ -24,6 +24,7 @@
 .banner-info-pos{
     position: absolute;
     height: 100%;
+    width: 100%;
     @include ptr(padding, 0 130);
     top: 0;
     left: 0;
@@ -107,6 +108,20 @@
     position: relative;
     @include fluidFontSize(14px,18px,480px,1680px,22px,16px);
     @include ptr(margin, 0 0 20 0);
+}
+.proposals-title-transp{
+    @include fluidFontSize(50px,200px,480px,1680px,204px,100px);
+    color: rgba(189,189,189,.1);
+    text-transform: uppercase;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .proposals-info{
     position: relative;
@@ -194,6 +209,15 @@
 .save-title{
     color: $color3;
     @include ptr(margin, 0 0 25 0);
+}
+
+
+.subscribers{
+    padding-bottom: 0;
+    background: none;
+    .overload-item{
+        @include ptr(margin, 0 0 90 0);
+    }
 }
 
 

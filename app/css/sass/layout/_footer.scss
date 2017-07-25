@@ -3,8 +3,8 @@
    ======================= */
 
 .footer {
-    margin: -380px auto 0;
-    height: 380px;
+    /*margin: -380px auto 0;
+    height: 380px;*/
     @include ptr(padding, 40 0 20);
     background: $color1;
     position: relative;
@@ -31,6 +31,6 @@
     }
 }
 .copy{
-    @include ptr(margin, 50 0 0 0);
+    @include ptr(margin, 15 0 0 0);
     text-align: center;
 }
