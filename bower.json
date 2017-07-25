@@ -12,7 +12,6 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.1.0",
     "font-awesome": "fontawesome#^4.7.0",
     "jquery.form-styler": "jquery-form-styler#^2.0.0"
   },

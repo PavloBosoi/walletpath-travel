@@ -36,7 +36,7 @@ var path = {
     },
     app: {
         html: 'app/*.html',
-        js: 'app/js/main.js',
+        js: 'app/js/*.js',
         css: 'app/css/sass/main.scss',
         img: 'app/images/*.*',
         fonts: 'app/fonts/',

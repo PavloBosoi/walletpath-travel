@@ -18,19 +18,19 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 */
 .icon-check {
   background-image: url(sprite.png);
-  background-position: -106px -52px;
+  background-position: -129px -52px;
   width: 18px;
   height: 14px;
 }
 .icon-close {
   background-image: url(sprite.png);
-  background-position: -299px -225px;
+  background-position: -225px -226px;
   width: 30px;
   height: 30px;
 }
 .icon-feature1 {
   background-image: url(sprite.png);
-  background-position: -55px -267px;
+  background-position: -199px -153px;
   width: 86px;
   height: 34px;
 }
@@ -42,19 +42,19 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-feature3 {
   background-image: url(sprite.png);
-  background-position: 0px -153px;
+  background-position: -75px -153px;
   width: 119px;
   height: 39px;
 }
 .icon-feature4 {
   background-image: url(sprite.png);
-  background-position: -124px -153px;
+  background-position: 0px -298px;
   width: 98px;
   height: 39px;
 }
 .icon-feature5 {
   background-image: url(sprite.png);
-  background-position: -150px -197px;
+  background-position: -299px -225px;
   width: 64px;
   height: 56px;
 }
@@ -66,73 +66,109 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-instruction1 {
   background-image: url(sprite.png);
-  background-position: -75px -197px;
+  background-position: -150px -226px;
   width: 70px;
   height: 57px;
 }
 .icon-instruction2 {
   background-image: url(sprite.png);
-  background-position: -219px -197px;
+  background-position: -231px -81px;
   width: 56px;
   height: 56px;
 }
 .icon-instruction3 {
   background-image: url(sprite.png);
-  background-position: 0px -78px;
+  background-position: -75px -78px;
   width: 70px;
   height: 70px;
 }
+.icon-lock {
+  background-image: url(sprite.png);
+  background-position: -106px -52px;
+  width: 18px;
+  height: 20px;
+}
 .icon-plus {
   background-image: url(sprite.png);
-  background-position: -334px -225px;
+  background-position: -75px -197px;
   width: 24px;
   height: 24px;
 }
+.icon-prem-subscriber1 {
+  background-image: url(sprite.png);
+  background-position: -150px -78px;
+  width: 70px;
+  height: 68px;
+}
+.icon-prem-subscriber2 {
+  background-image: url(sprite.png);
+  background-position: 0px -153px;
+  width: 70px;
+  height: 68px;
+}
+.icon-prem-subscriber3 {
+  background-image: url(sprite.png);
+  background-position: -370px 0px;
+  width: 60px;
+  height: 69px;
+}
+.icon-prem-subscriber4 {
+  background-image: url(sprite.png);
+  background-position: -299px 0px;
+  width: 66px;
+  height: 70px;
+}
+.icon-prem-subscriber5 {
+  background-image: url(sprite.png);
+  background-position: 0px -342px;
+  width: 44px;
+  height: 70px;
+}
 .icon-save1 {
   background-image: url(sprite.png);
-  background-position: 0px -197px;
+  background-position: -75px -226px;
   width: 70px;
   height: 65px;
 }
 .icon-save2 {
   background-image: url(sprite.png);
-  background-position: -150px -78px;
+  background-position: 0px -226px;
   width: 70px;
   height: 67px;
 }
 .icon-save3 {
   background-image: url(sprite.png);
-  background-position: -299px 0px;
+  background-position: -299px -75px;
   width: 64px;
   height: 70px;
 }
 .icon-save4 {
   background-image: url(sprite.png);
-  background-position: -299px -150px;
+  background-position: -370px -74px;
   width: 52px;
   height: 70px;
 }
 .icon-save5 {
   background-image: url(sprite.png);
-  background-position: -75px -78px;
+  background-position: 0px -78px;
   width: 70px;
   height: 70px;
 }
 .icon-save6 {
   background-image: url(sprite.png);
-  background-position: -231px -81px;
+  background-position: -370px -149px;
   width: 60px;
   height: 60px;
 }
 .icon-save7 {
   background-image: url(sprite.png);
-  background-position: 0px -267px;
+  background-position: -370px -214px;
   width: 50px;
   height: 70px;
 }
 .icon-save8 {
   background-image: url(sprite.png);
-  background-position: -299px -75px;
+  background-position: -299px -150px;
   width: 60px;
   height: 70px;
 }
