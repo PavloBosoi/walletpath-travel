@@ -26,7 +26,13 @@
 }
 
 @media only screen and (max-width: 1280px) {
-
+    .menu{
+        ul{
+            li{
+                @include ptr(padding, 0 15);
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -48,6 +54,11 @@
     .btn-all{
         width: auto;
     }
+    .price-item{
+        .btn-smooth{
+            width: 100%;
+        }
+    }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -57,7 +68,7 @@
     .proposals-item{
         @include ptr(height, 350);
     }
-    .login{
+    .header-deep .login{
         margin-right: 40px;
     }
     .menu > ul{
@@ -118,6 +129,12 @@
         @include ptr(top,5);
         @include ptr(left,3);
     }
+    .price-item{
+        @include ptr(padding, 65 15 45);
+    }
+    .ribbon span{
+        @include ptr(line-height,35);
+    }
     html {
         font-size: 8px;
     }
@@ -162,6 +179,20 @@
         width: 50%;
         @include ptr(margin, 0 0 20 0);
     }
+    .price-parent{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .price-item{
+        width: 55%;
+        float: none;
+        @include ptr(margin, 50 0);
+        order: 1;
+    }
+    .price-item-popular{
+        order: 0;
+    }
 }
 
 @media only screen and (max-width: 640px) {
@@ -201,6 +232,17 @@
     }
     .form-tags{
         width: 100%;
+    }
+    .gap-item{
+        text-align: center;
+        @include ptr(margin, 30 0);
+    }
+    .gap-info::before{
+        left: 50%;
+        @include ptr(margin, 0 0 0 -10);
+    }
+    .price-item {
+        width: 65%;
     }
 }
 
@@ -260,6 +302,22 @@
         label{
             span{
                 position: static;
+            }
+        }
+    }
+    .price-item {
+        width: 100%;
+    }
+    .ribbon span{
+        line-height: 26px;
+    }
+    .location{
+        label{
+            display: block;
+            margin: 0;
+            span{
+                display: block;
+                margin: 0;
             }
         }
     }

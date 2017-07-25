@@ -13,7 +13,8 @@
     color: $color1;
     @include ptr(border-radius, 35);
     text-transform: uppercase;
-    &:hover{
+    &:hover,
+    &:focus{
         background-color: $color2;
         color: #fff;
         text-decoration: none;
@@ -31,9 +32,32 @@
     color: #fff;
     @include ptr(border-radius, 35);
     text-transform: uppercase;
-    &:hover{
+    &:hover,
+    &:focus{
         background-color: transparent;
         color: $color2;
+        text-decoration: none;
+    }
+}
+
+.btn-smooth{
+    @include ptr(padding, 0 38);
+    @include ptr(height, 60);
+    @include ptr(line-height, 58);
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    border: 1px solid $color2;
+    @include ptr(font-size, 16);
+    color: $color1;
+    margin-left: auto;
+    margin-right: auto;
+    @include ptr(border-radius, 2);
+    text-transform: uppercase;
+    &:hover,
+    &:focus{
+        background-color: $color2;
+        color: #fff;
         text-decoration: none;
     }
 }

@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html>
-    //= template/head.html
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test</title>
+        <meta name="keywords" content=""/>
+        <meta name="description" content=""/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+        <link rel="stylesheet" href="css/libs.min.css"/>
+        <link rel="stylesheet" href="css/main.css"/>
+    
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/libs.min.js" type="text/javascript"></script>
+    
+        <script src="js/main.js"></script>
+    <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/plugins/animation.gsap.min.js"></script>-->
+        <!--[if lt IE 9]>
+        <script src="js/ie.min.js"></script>
+        <![endif]-->
+    </head>
     <body class="main-page">
 
         <div class="wrapper">
-            //= template/header.html
+            <header class="header">
+                <div class="container">
+                    <div class="h-block-parent">
+                        <div class="logo h-block">
+                            <a href="#"><img src="images/logo.png" alt="logo"></a>
+                        </div>
+                        <div class="location h-block">
+                            <form action="#" method="post">
+                                <label>
+                                    <span>Location</span>
+                                    <select name="location">
+                                        <option value="usa">usa</option>
+                                        <option value="ukraine">ukraine</option>
+                                        <option value="usa">usa</option>
+                                    </select>
+                                </label>
+                            </form>
+                        </div>
+                        <div class="login h-block">
+                            <a href="#" class="btn-empty">login</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- .header-->
             <main class="content">
 
                 <section class="banner" style="background-image: url('images/banner-prices.jpg')">
@@ -48,9 +92,7 @@
                                     </ul>
                                     <p>With your paid subscription you are agreeing to receive emails from Scott’s Cheap Flights.</p>
                                 </div>
-                                <div class="price-btn">
-                                    <a href="#" class="btn-smooth">Sign up for all the deals</a>
-                                </div>
+                                <a href="#" class="btn-smooth">Sign up for all the deals</a>
                                 <div class="price-security">
                                     <i class="icon icon-lock"></i>
                                     <span>Secure Checkout</span>
@@ -79,9 +121,7 @@
                                     </ul>
                                     <p>With your paid subscription you are agreeing to receive emails from Scott’s Cheap Flights.</p>
                                 </div>
-                                <div class="price-btn">
-                                    <a href="#" class="btn-smooth">Sign up for all the deals</a>
-                                </div>
+                                <a href="#" class="btn-smooth">Sign up for all the deals</a>
                                 <div class="price-security">
                                     <i class="icon icon-lock"></i>
                                     <span>Secure Checkout</span>
@@ -109,9 +149,7 @@
                                     </ul>
                                     <p>With your paid subscription you are agreeing to receive emails from Scott’s Cheap Flights.</p>
                                 </div>
-                                <div class="price-btn">
-                                    <a href="#" class="btn-smooth">Sign up for all the deals</a>
-                                </div>
+                                <a href="#" class="btn-smooth">Sign up for all the deals</a>
                                 <div class="price-security">
                                     <i class="icon icon-lock"></i>
                                     <span>Secure Checkout</span>
@@ -254,7 +292,7 @@
                     </div>
                 </section>
 
-                <section class="gap" style="background-image: url('images/gap-prices.jpg')">
+                <section class="gap">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 full-width">
@@ -422,6 +460,47 @@
             <!-- .content -->
         </div>
         <!-- .wrapper -->
-        //= template/footer.html
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 full-s-width">
+                        <nav class="menu-footer">
+                            <ul>
+                                <li><a href="#">Premium Login</a></li>
+                                <li><a href="#">See Prices and Sign Up</a></li>
+                                <li><a href="#">Success Stories</a></li>
+                                <li><a href="#">Frequently Asked Questions</a></li>
+                                <li><a href="#">Partner Login</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 full-s-width">
+                        <nav class="menu-footer">
+                            <ul>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Locations</a></li>
+                                <li><a href="#">Affiliate Program</a></li>
+                                <li><a href="#">Press</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 full-s-width">
+                        <nav class="menu-footer">
+                            <ul>
+                                <li><a href="#">Refund Policy</a></li>
+                                <li><a href="#">Send in Your Travel Photos & Videos</a></li>
+                                <li><a href="#">Updated Terms of Use</a></li>
+                                <li><a href="#">Updated EU Safe Harbor Policy</a></li>
+                                <li><a href="#">Updated Privacy Policy</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="copy">
+                    <p>&copy; 2017 Walletpath Travel</p>
+                </div>
+            </div>
+        </footer><!-- .footer -->
     </body>
 </html>

@@ -22,6 +22,13 @@ $(function(){
         }
     }
 
+    //wrap first part cost for bigger font-size
+    $('.js-cost p').each(function(){
+        var num = $(this).text().split('.')[0],
+            num2 = $(this).text().split('.')[1];
+        $(this).html('<i>'+num+'</i>.'+num2);
+    });
+
 
     //formstyler
     $('input:not(:radio),select').styler();

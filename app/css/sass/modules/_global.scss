@@ -18,6 +18,9 @@
         @include fluidFontSize(16px,24px,480px,1680px,28px,20px);
         font-weight: normal;
     }
+    h1+p{
+        @include ptr(margin, 30 0 0);
+    }
 }
 .title-section{
     position: relative;
@@ -84,6 +87,9 @@
 
 .deep{
     @include ptr(margin, 90 0 100 0);
+}
+.load-more{
+    text-align: center;
 }
 
 
@@ -153,6 +159,7 @@
 }
 .overload-item{
     @include ptr(padding,0 22 0 0);
+    @include ptr(margin,0 0 90 0);
     position: relative;
 }
 .overload-icon{
@@ -206,6 +213,55 @@
         font-weight: bold;
         color: $color1;
     }
+}
+
+
+/*===ribbon===*/
+.ribbon {
+    position: absolute;
+    @include ptr(top,-35);
+    @include ptr(right,-35);
+    z-index: 1;
+    overflow: hidden;
+    @include ptr(width, 185);
+    @include ptr(height, 185);
+    text-align: right;
+}
+.ribbon span {
+    @include fluidFontSize(14px,16px,480px,1680px,35px,15px);
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    @include ptr(width, 185);
+    @include ptr(height, 35);
+    display: block;
+    background-color: #025840;
+    position: absolute;
+    @include ptr(top,38);
+    @include ptr(right,-34);
+}
+.ribbon span::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 100%;
+    z-index: -1;
+    border-left: 4px solid #003224;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid #003224;
+}
+.ribbon span::after {
+    content: "";
+    position: absolute; right: 0px; top: 100%;
+    z-index: -1;
+    border-left: 4px solid transparent;
+    border-right: 4px solid #003224;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid #003224;
 }
 
 

@@ -51,7 +51,7 @@
 
 /*===Section-Instruction===*/
 .instruction{
-    @include ptr(padding, 85 0);
+    @include ptr(padding, 85 0 0);
     position: relative;
     &::before{
         content: '';
@@ -110,7 +110,7 @@
     @include ptr(margin, 0 0 20 0);
 }
 .proposals-title-transp{
-    @include fluidFontSize(50px,200px,480px,1680px,204px,100px);
+    @include fluidFontSize(50px,190px,480px,1680px,204px,100px);
     color: rgba(189,189,189,.1);
     text-transform: uppercase;
     position: absolute;
@@ -149,7 +149,7 @@
 
 /*===Section-Stories===*/
 .stories{
-    @include ptr(padding, 85 0 95);
+    @include ptr(padding, 85 0 5);
     position: relative;
     &::before{
         content: '';
@@ -172,6 +172,7 @@
 /*===Section-Flight===*/
 .flight{
     background: transparent url("../images/bg-flight.png") no-repeat scroll 50% 50%;
+    background-size: cover;
     @include ptr(padding, 90 0);
     .form-s{
         @include ptr(margin-top, 60);
@@ -194,9 +195,8 @@
     }
 }
 .save-parent{
-    @include ptr(margin, 100 0 0 0);
+    @include ptr(margin, 100 0 25 0);
     .overload-item{
-        @include ptr(margin, 0 0 90 0);
         padding: 0;
     }
     .overload-icon{
@@ -213,7 +213,6 @@
 
 /*===PRICES===*/
 .subscribers{
-    padding-bottom: 0;
     &::before{
         background: none;
     }
@@ -234,15 +233,153 @@
 }
 
 .price-table{
-    @include ptr(padding, 100 0);
+    @include ptr(padding, 150 0 100);
 }
 .price-item{
+    position: relative;
     @include ptr(padding, 65 35 45);
-    width: 30%;
+    width: 32%;
+    float: left;
     background-color: #fff;
     box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.05);
+    .btn-smooth{
+        @include ptr(width, 285);
+        @include ptr(margin-top, 62);
+        padding: 0;
+    }
+}
+.price-title{
+    text-align: center;
+    font-family: $font1;
+    font-weight: bold;
+    @include fluidFontSize(24px,48px,480px,1680px,52px,36px);
+    h1,h2,h3,h4{
+        font-weight: bold;
+    }
+    p{
+        @include ptr(margin,5 0 0);
+        @include fluidFontSize(14px,18px,480px,1680px,22px,16px);
+        font-weight: normal;
+        color: #b3c3c9;
+    }
+}
+.price-cost{
+    text-align: center;
+    @include ptr(margin,25 0 0);
+    span{
+        display: inline-block;
+        @include fluidFontSize(24px,48px,480px,1680px,68px,36px);
+        color: $color2;
+        font-weight: bold;
+        vertical-align: top;
+    }
+    p{
+        display: inline-block;
+        @include fluidFontSize(24px,48px,480px,1680px,52px,36px);
+        color: $color2;
+        font-weight: bold;
+        i{
+            font-style: normal;
+            @include fluidFontSize(36px,72px,480px,1680px,80px,54px);
+        }
+    }
+}
+.price-info{
+    @include ptr(margin,50 0 0);
+    li{
+        @include ptr(padding, 0 0 0 20);
+        @include ptr(margin, 14 0 0 0);
+        &:first-child{
+            margin: 0;
+        }
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 5px;
+            height: 5px;
+            margin: -3px 0 0 0;
+            background-color: $color2;
+            border-radius: 50%;
+        }
+        span{
+            font-weight: bold;
+        }
+    }
+    p{
+        @include ptr(margin, 25 0 0 0);
+    }
+}
+.price-btn{
+    text-align: center;
+}
+.price-security{
+    @include ptr(margin, 15 0 0 0);
+    @include fluidFontSize(14px,16px,480px,1680px,20px,15px);
+    color: #b3c3c9;
+    text-align: center;
+    i,span{
+        vertical-align: middle;
+    }
+}
+.price-item-popular{
+    border: 20px solid #f7f7f7;
+    border: 2rem solid #f7f7f7;
+    @include ptr(margin, -50 0 0 0);
+    width: 36%;
+    z-index: 2;
+    .price-info{
+        @include ptr(margin, 80 0 0 0);
+    }
+    .btn-smooth{
+        @include ptr(margin-top, 100);
+    }
 }
 
+.gap{
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include ptr(padding, 85 0);
+}
+.gap-item{
+    @include ptr(padding, 0 23 0 0);
+}
+.gap-title{
+    @include fluidFontSize(16px,24px,480px,1680px,28px,20px);
+    color: $color2;
+    font-family: $font1;
+    font-weight: bold;
+    @include ptr(margin,0 0 20);
+    h1,h2,h3,h4{
+        font-weight: bold;
+    }
+}
+.gap-info{
+    @include fluidFontSize(14px,18px,480px,1680px,22px,16px);
+    color: #fff;
+    @include ptr(padding,20 0 0);
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include ptr(width,20);
+        height: 1px;
+        background-color: #3d3939;
+    }
+}
+
+/*===HAPPY-SUBSCRIBERS===*/
+.h-subscribers{
+    @include ptr(padding, 85 0 100 0);
+    &::before{
+        display: none;
+    }
+}
 
 
 /*===ACCOUNT===*/
