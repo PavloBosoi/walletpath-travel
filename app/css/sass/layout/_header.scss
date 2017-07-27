@@ -85,7 +85,8 @@
                 text-transform: uppercase;
                 color: $color1;
                 font-weight: bold;
-                &:hover{
+                &:hover,
+                &:focus{
                     color: $color2;
                     text-decoration: none;
                 }
