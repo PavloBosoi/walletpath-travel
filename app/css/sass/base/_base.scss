@@ -22,9 +22,10 @@ body{
     font-family: $font1;
     font-weight: 300;
     @include fluidFontSize(14px,18px,480px,1680px,22px,16px);
-    color: #424242;
-    /*background: transparent url("../images/bg.jpg") no-repeat scroll 50% 0;
-    opacity: .5;*/
+    /*color: #424242;*/
+    color: $color1;
+    background: transparent url("../images/bg.jpg") no-repeat scroll 50% 0;
+    opacity: .5;
 }
 li{
     list-style-type: none;

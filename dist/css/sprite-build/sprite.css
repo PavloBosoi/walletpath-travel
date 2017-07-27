@@ -24,7 +24,7 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-close {
   background-image: url(sprite.png);
-  background-position: -225px -226px;
+  background-position: -262px -226px;
   width: 30px;
   height: 30px;
 }
@@ -96,13 +96,13 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-prem-subscriber1 {
   background-image: url(sprite.png);
-  background-position: -150px -78px;
+  background-position: 0px -153px;
   width: 70px;
   height: 68px;
 }
 .icon-prem-subscriber2 {
   background-image: url(sprite.png);
-  background-position: 0px -153px;
+  background-position: -150px -78px;
   width: 70px;
   height: 68px;
 }
@@ -177,4 +177,10 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   background-position: -231px 0px;
   width: 63px;
   height: 76px;
+}
+.icon-search {
+  background-image: url(sprite.png);
+  background-position: -225px -226px;
+  width: 32px;
+  height: 32px;
 }

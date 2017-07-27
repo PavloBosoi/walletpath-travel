@@ -381,6 +381,107 @@
     }
 }
 
+/*===TEAM===*/
+.team{
+    @include ptr(padding, 85 0 5 0);
+    &::before{
+        display: none;
+    }
+}
+
+/*===CONTACT===*/
+.email-btn{
+    text-align: center;
+    @include ptr(margin, 90 0 0 0);
+    .btn-empty{
+        text-transform: none;
+    }
+}
+
+/*===FAQ===*/
+.form-search{
+    input{
+        width: calc(100% - 60px);
+    }
+    .btn-form-s{
+        width: 60px;
+        line-height: 0;
+    }
+}
+.list-blocks{
+    @include ptr(padding, 90 0 0);
+}
+.list-parent{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.list-item{
+    width: 50%;
+    @include ptr(margin, 0 0 90);
+    padding-left: 15px;
+    padding-right: 15px;
+    h3{
+        @include fluidFontSize(16px,24px,480px,1680px,28px,20px);
+        font-weight: bold;
+        @include ptr(margin,0 0 20);
+    }
+    li{
+        @include ptr(padding,0 0 0 20);
+        @include ptr(margin, 12 0 0);
+        position: relative;
+        &:first-child{
+            margin: 0;
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            @include ptr(top,11);
+            left: 0;
+            width: 5px;
+            height: 5px;
+            background-color: $color2;
+            border-radius: 50%;
+        }
+        a{
+            color: $color2;
+            @include fluidFontSize(16px,21px,480px,1680px,25px,18px);
+        }
+    }
+    .btn-smooth{
+        @include ptr(margin, 40 0 0);
+    }
+}
+/*===FAQ-INTERNAL===*/
+.text-s-page{
+    .title-page{
+        margin: 0;
+        text-align: left;
+        @include fluidFontSize(17px,36px,480px,1680px,40px,25px);
+    }
+    .deep-content{
+        margin: 0;
+    }
+}
+.help-info{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    @include ptr(height, 100);
+    @include ptr(line-height, 100);
+    background-color: #f7f7f7;
+    p{
+        display: inline-block;
+        @include ptr(margin, 0 40 0 0);
+        @include fluidFontSize(16px,24px,480px,1680px,28px,20px);
+    }
+    .btn-empty{
+        @include ptr(padding, 0 53);
+        @include ptr(margin, 0 5 0);
+    }
+}
 
 /*===ACCOUNT===*/
 /*===Account-Settings===*/
@@ -624,6 +725,7 @@
     .btn-plus{
         width: 60px;
         height: 60px;
+        line-height: 0;
         background-color: $color2;
         float: left;
         border-bottom-right-radius: 3px;
@@ -653,9 +755,14 @@
 }
 
 /*===Text-Pages===*/
-.text-content p{
-    @include ptr(margin, 35 0 0 0);
-    @include fluidFontSize(14px,16px,480px,1680px,20px,15px);
+.text-content{
+    p{
+        @include ptr(margin, 35 0 0 0);
+        @include fluidFontSize(14px,16px,480px,1680px,20px,15px);
+    }
+    a{
+        color: $color2;
+    }
 }
 .text-center{
     text-align: center;
