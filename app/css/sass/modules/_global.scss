@@ -452,3 +452,67 @@
 .jq-checkbox.checked{
     border: 1px solid $color2;
 }
+
+
+
+.form-group{
+    display: block;
+    position: relative;
+    span{
+        position: absolute;
+        @include ptr(bottom, 20);
+        @include ptr(left, 30);
+        color: #9e9e9e;
+        @include fluidFontSize(14px,16px,480px,1680px,20px,15px);
+        transition: $linear-f;
+    }
+    &.active{
+        span{
+            bottom: calc(100% + 5px);
+            left: 0;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $color1;
+            @include fluidFontSize(12px,14px,480px,1680px,14px,13px);
+        }
+    }
+}
+.form-account-textarea{
+    span{
+        @include ptr(bottom, 17);
+        @include fluidFontSize(12px,14px,480px,1680px,18px,13px);
+    }
+    .form-group.active{
+        span{
+            @include fluidFontSize(11px,12px,480px,1680px,14px,12px);
+            text-transform: none;
+        }
+    }
+}
+.login-password,
+.login-username{
+    display: block;
+    position: relative;
+    @include ptr(margin, 0 0 40 0);
+    label{
+        position: absolute;
+        @include ptr(bottom, 20);
+        @include ptr(left, 30);
+        color: #9e9e9e;
+        @include fluidFontSize(14px,16px,480px,1680px,20px,15px);
+        transition: $linear-f;
+    }
+    &.active{
+        label{
+            bottom: calc(100% + 5px);
+            left: 0;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $color1;
+            @include fluidFontSize(12px,14px,480px,1680px,14px,13px);
+        }
+    }
+    input{
+        margin: 0;
+    }
+}

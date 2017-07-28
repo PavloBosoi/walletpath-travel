@@ -51,6 +51,9 @@
             @include ptr(height, 100);
         }
     }
+    .form-account-textarea span{
+        bottom: calc(50% - 22px);
+    }
     .btn-all{
         width: auto;
     }
@@ -134,6 +137,9 @@
     }
     .ribbon span{
         @include ptr(line-height,35);
+    }
+    .form-account .form-account-textarea label{
+        @include ptr(margin-top, 60);
     }
     html {
         font-size: 8px;
@@ -259,6 +265,9 @@
     .list-item{
         width: 100%;
     }
+    .form-login{
+        @include ptr(width, 450);
+    }
 }
 
 @media only screen and (max-width: 480px) {
@@ -344,6 +353,9 @@
                 margin: 0;
             }
         }
+    }
+    .form-login{
+        width: 100%;
     }
     .footer{
         /*height: 720px;

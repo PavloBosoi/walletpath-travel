@@ -31,7 +31,7 @@ $(function(){
 
 
     //formstyler
-    $('input:not(:radio),select').styler();
+    $('input,select').styler();
 
     //btn-menu
     btnMenu.on('click', function(e){
@@ -103,6 +103,38 @@ $(function(){
         }
             //checkFilter.trigger('click');
     });
+
+
+    /*===CONTACT===*/
+    function formLabel(el){
+        $(el).each(function(){
+            $(this).addClass('active');
+            if($(this).find('input').val() === '' || $(this).find('textarea').val() === ''){
+                //если инпут или текстареа не пусты
+                $(this).removeClass('active');
+            }
+        });
+        $(el).on('click contextmenu focusin',function(e){
+            $(el).each(function(){
+                if($(this).find('input').val() === '' || $(this).find('textarea').val() === ''){
+                    //если инпут или текстареа не пусты
+                    $(this).removeClass('active');
+                }
+            });
+            $(this).addClass('active');
+        });
+        $(document).mouseup(function(e){// событие клика по веб-документу
+            $(el).each(function(){
+                if($(this).find('input').val() === '' || $(this).find('textarea').val() === '' && !$(this).is(e.target) && $(this).has(e.target).length === 0){
+                    //если инпут или текстареа не пусты и клик был не поселектору и не по его дочерним элементам
+                    $(this).removeClass('active');
+                }
+            });
+        });
+    }
+    formLabel('.js-form-group');
+    formLabel('.login-username');
+    formLabel('.login-password');
 
 
     $(window).resize(function(){

@@ -484,37 +484,73 @@
 }
 
 /*===ACCOUNT===*/
+/*===Login===*/
+.form-login{
+    @include ptr(width, 570);
+    margin: 0 auto;
+    .jq-checkbox{
+        vertical-align: middle;
+        @include ptr(margin-top, -2);
+    }
+}
+.lost_password{
+    float: right;
+    a{
+        color: $color2;
+        display: inline-block;
+        @include ptr(margin-top, -2);
+    }
+}
+.login-submit,
+p.submit{
+    @include ptr(margin, 25 0 0 0);
+    text-align: center;
+    input{
+        display: inline-block;
+        width: auto;
+        @include ptr(min-width, 180);
+    }
+}
+p.submit{
+    margin: 0;
+}
+
 /*===Account-Settings===*/
 .account-settings{
     @include ptr(margin, 115 0 0 0);
 }
 .form-account{
+    label{
+        @include ptr(margin, 40 0 0);
+    }
     input[type="submit"]{
         line-height: 0;
+    }
+    input{
+        @include ptr(padding,10 30);
+        margin: 0;
     }
     textarea{
         @include ptr(height, 60);
         @include ptr(padding,10 30);
-        @include ptr(margin, 0 0 40 0);
+        margin: 0;
+    }
+    .btn-all{
+        @include ptr(margin, 40 0 0);
     }
 }
 .form-account-input{
     label{
         display: block;
         position: relative;
-        span{
-            position: absolute;
-            @include ptr(top, -25);
-            left: 0;
-            text-transform: uppercase;
-            font-weight: bold;
-            @include fluidFontSize(12px,14px,480px,1680px,18px,13px);
+        &:first-child{
+            margin: 0;
         }
     }
 }
 .form-account-radio{
     position: relative;
-    @include ptr(margin, 30 0 30 0);
+    @include ptr(margin, 60 0 30 0);
     p{
         display: block;
         position: absolute;
@@ -535,32 +571,6 @@
     span{
         display: inline-block;
         vertical-align: middle;
-    }
-}
-
-.form-account-select-input{
-    display: flex;
-    align-items: flex-end;
-    margin: 0 -15px;
-    label{
-        display: block;
-        position: relative;
-        @include ptr(margin, 0 0 40 0);
-        width: 33.3333%;
-        margin-left: 15px;
-        margin-right: 15px;
-        span{
-            position: absolute;
-            @include ptr(top, -25);
-            left: 0;
-            text-transform: uppercase;
-            font-weight: bold;
-            @include fluidFontSize(12px,14px,480px,1680px,18px,13px);
-        }
-        input,
-        select{
-            margin: 0;
-        }
     }
 }
 
@@ -619,6 +629,48 @@
 /*===Update-Billing===*/
 .update-billing{
     @include ptr(margin, 80 0 0 0);
+}
+.form-billing{
+    .form-account-input{
+        span{
+            display: block;
+            @include ptr(margin, 0 0 7 0);
+            text-transform: uppercase;
+            font-weight: bold;
+            @include fluidFontSize(12px,14px,480px,1680px,18px,13px);
+        }
+    }
+}
+#lostpasswordform label{
+    display: block;
+    @include ptr(margin, 0 0 7 0);
+    text-transform: uppercase;
+    font-weight: bold;
+    @include fluidFontSize(12px,14px,480px,1680px,18px,13px);
+}
+.form-account-select-input{
+    display: flex;
+    align-items: flex-end;
+    margin: 0 -15px;
+    label{
+        display: block;
+        position: relative;
+        @include ptr(margin, 0 0 40 0);
+        width: 33.3333%;
+        margin-left: 15px;
+        margin-right: 15px;
+        span{
+            display: block;
+            @include ptr(margin, 0 0 7 0);
+            text-transform: uppercase;
+            font-weight: bold;
+            @include fluidFontSize(12px,14px,480px,1680px,18px,13px);
+        }
+        input,
+        select{
+            margin: 0;
+        }
+    }
 }
 /*===Departure-Cities===*/
 .form-search-checkbox{

@@ -57,12 +57,12 @@
                                 <div class="form-account">
                                     <form action="#" method="post">
                                         <div class="form-account-input">
-                                            <label><span>First Name</span><input type="text"></label>
-                                            <label><span>Last Name</span><input type="text"></label>
+                                            <label class="form-group js-form-group"><span>First Name</span><input type="text"></label>
+                                            <label class="form-group js-form-group"><span>Last Name</span><input type="text"></label>
                                         </div>
                                         <div class="form-account-textarea">
-                                            <label><textarea placeholder="E-mail(only enter email if you want to change the email address on your subscription)"></textarea></label>
-                                            <label><textarea placeholder="Phone (only enter phone number if you want text message alerts)"></textarea></label>
+                                            <label class="form-group js-form-group"><span>E-mail<br/>(only enter email if you want to change the email address on your subscription)</span><textarea></textarea></label>
+                                            <label class="form-group js-form-group"><span>Phone<br/>(only enter phone number if you want text message alerts)</span><textarea>fgfg</textarea></label>
                                         </div>
                                         <div class="form-account-radio">
                                             <p>Text Message Alerts</p>
@@ -70,8 +70,14 @@
                                             <label><input name="alert-message" type="radio"><span>Off</span></label>
                                         </div>
                                         <div class="form-account-input">
-                                            <label><input type="text" placeholder="New Password"></label>
-                                            <label><input type="text" placeholder="Re-enter Password"></label>
+                                            <label class="form-group js-form-group">
+                                                <span>New Password</span>
+                                                <input type="text">
+                                            </label>
+                                            <label class="form-group js-form-group">
+                                                <span>Re-enter Password</span>
+                                                <input type="text">
+                                            </label>
                                         </div>
                                         <input class="btn-all" type="submit" value="SAVE CHANGES">
                                     </form>
