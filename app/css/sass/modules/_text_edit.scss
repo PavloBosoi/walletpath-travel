@@ -2,170 +2,159 @@
    Module/Text_edit
    ======================= */
 
-.text_edit h1 {
-    font-weight: 400;
-    font-family: $font1;
-    @include fluidFontSize(24px,38px,480px,1023px,42px,28px);
-    @include ptr(margin,30 0);
-    color: $color1;
-}
-
-.text_edit h2 {
-    font-weight: 400;
-    font-family: $font1;
-    @include fluidFontSize(24px,38px,480px,1023px,42px,28px);
-    @include ptr(margin,30 0 10);
-    color: $color1;
-}
-.text_edit h2:first-child{
-    @include ptr(margin,0 0 10);
-}
-
-.text_edit h3{
-    font-weight: 400;
-    font-family: $font1;
-    @include fluidFontSize(20px,35px,480px,1023px,49px,24px);
-    @include ptr(margin,30 0 10);
-    color: $color1;
-}
-.text_edit h3:first-child{
-    @include ptr(margin,0 0 10);
-}
-.text_edit h4{
-    font-weight: 300;
-    font-family: $font1;
-    @include fluidFontSize(14px,18px,480px,1023px,22px,16px);
-    text-decoration: underline;
-}
-
-.text_edit a {
-    color: $color1;;
-}
-
-.text_edit a:hover {
-    text-decoration: underline;
-}
-
-.text_edit p {
-    font-weight: 400;
-    font-family: $font1;
-    @include fluidFontSize(16px,30px,480px,1680px,34px,15px);
-}
-
-.text_edit strong {
-    font-weight: bold;
-}
-
-.text_edit h4 + ul{
-    @include ptr(margin,0 0 30 15);
-}
-.text_edit ul {
-    @include fluidFontSize(14px,16px,480px,1023px,20px,16px);
-    text-align: left;
-    @include ptr(margin,30 0 30 15);
-}
-
-.text_edit ul li ul {
-    @include ptr(margin-top,15);
-    text-align: left;
-}
-.text_edit ul li {
-    list-style-type: none;
-    position: relative;
-    @include ptr(margin-top,5);
-    @include ptr(padding-left,13);
-    display: block;
-    text-align: left;
-}
-.text_edit ul li:first-child{
-	margin: 0;
-}
-.text_edit ul li:before {
-    content: '';
-    position: absolute;
-    display: block;
-    @include ptr(top,6);
-    left: 0;
-    @include ptr(width,6);
-    @include ptr(height,6);
-    border-radius: 50%;
-    background-color: $color1;
-}
-
-.text_edit ul li span{
-    display: block;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-.text_edit ol {
-    @include ptr(line-height,50);
-    text-align: left;
-    counter-reset: li;
-}
-.text_edit ol li {
-    position: relative;
-    @include ptr(margin-top,40);
-    @include ptr(padding,0 0 0 60);
-    display: block;
-    text-align: left;
-    &:first-child{
+.text_edit {
+    h1 {
+        @include fluidFontSize(28px,56px,480px,1680px,72px,42px);
+        font-family: $font1;
+        font-weight: bold;
+        @include ptr(margin,0 0 35);
+    }
+    h2 {
+        @include fluidFontSize(16px,24px,480px,1680px,28px,20px);
+        font-family: $font1;
+        font-weight: bold;
+        @include ptr(margin,20 0 12);
+        &:first-child{
+            @include ptr(margin,0 0 12);
+        }
+    }
+    h3 {
+        @include fluidFontSize(14px,18px,480px,1680px,22px,16px);
+        font-family: $font1;
+        font-weight: bold;
+        @include ptr(margin,20 0 12);
+        &:first-child{
+            @include ptr(margin,0 0 12);
+        }
+    }
+    h1 + p,
+    h2 + p,
+    h3 + p{
         margin: 0;
     }
-}
+    p{
+        @include fluidFontSize(14px,18px,480px,1680px,24px,16px);
+        font-weight: normal;
+        @include ptr(margin,12 0 0);
+    }
+    a{
+        color: $color2;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    strong{
+        font-weight: bold;
+    }
 
-.text_edit ol li:before {
-    content: '0' counter(li, decimal) "";
-    counter-increment: li;
-    color: $color2;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
 
-.text_edit > img{
-    margin: 0 20px 0 0;
-    margin: 0 2rem 0 0;
-    display: block;
-    max-width: 100%;
-    height: auto;
-    float: left;
-}
+    ul{
+        @include fluidFontSize(14px,16px,480px,1023px,20px,16px);
+        text-align: left;
+        @include ptr(margin,30 0 30 15);
+    }
 
-.text_edit blockquote {
-    border: 1px dotted $color1;
-    border-left: 5px solid $color3;
-    border-left: .5rem solid $color3;
-    font-style: italic;
-    padding: 10px;
-    padding: 1rem;
-    width: 85%;
-    margin: 15px auto 0;
-    margin: 1.5rem auto 0;
-}
+    ul li ul {
+        @include ptr(margin-top,15);
+        text-align: left;
+    }
+    ul li {
+        list-style-type: none;
+        position: relative;
+        @include fluidFontSize(14px,18px,480px,1680px,24px,16px);
+        @include ptr(margin-top,12);
+        @include ptr(padding-left,13);
+        display: block;
+        text-align: left;
+    }
+    ul li:first-child{
+        margin: 0;
+    }
+    ul li:before {
+        content: '';
+        position: absolute;
+        display: block;
+        @include ptr(top,6);
+        left: 0;
+        @include ptr(width,6);
+        @include ptr(height,6);
+        border-radius: 50%;
+        background-color: $color1;
+    }
 
-.text_edit table{
-    width: 100%;
-    @include ptr(margin-top,20);
-}
-.text_edit th{
-    font-weight: bold;
-    padding: 18px;
-    padding: 1.8rem;
-    background-color: #ebebeb;
-    border-left: 1px solid #d7d7d7;
-    text-align: left;
-}
-.text_edit th:first-child{
-    border-left: 1px solid #ebebeb;
-}
-.text_edit th:last-child{
-    border-right: 1px solid #ebebeb;
-}
-.text_edit td{
-    background-color: #fff;
-    font-weight: 400;
-    padding: 18px;
-    padding: 1.8rem;
-    border: 1px solid #d7d7d7;
+    ul li span{
+        display: block;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    ol {
+        text-align: left;
+        counter-reset: li;
+        @include ptr(margin-top,15);
+    }
+    ol li {
+        position: relative;
+        @include fluidFontSize(14px,18px,480px,1680px,24px,16px);
+        @include ptr(margin-top,12);
+        display: block;
+        text-align: left;
+        &:first-child{
+            margin: 0;
+        }
+    }
+
+    ol li:before {
+        content: counter(li, decimal) '.';
+        counter-increment: li;
+        color: $color2;
+        @include ptr(margin, 0 5 0 10);
+    }
+
+    & > img{
+        margin: 0 20px 0 0;
+        margin: 0 2rem 0 0;
+        display: block;
+        max-width: 100%;
+        height: auto;
+        float: left;
+    }
+
+    blockquote {
+        border: 1px dotted $color1;
+        border-left: 5px solid $color3;
+        border-left: .5rem solid $color3;
+        font-style: italic;
+        padding: 10px;
+        padding: 1rem;
+        width: 85%;
+        margin: 15px auto 0;
+        margin: 1.5rem auto 0;
+    }
+
+    table{
+        width: 100%;
+        @include ptr(margin-top,20);
+    }
+    th{
+        font-weight: bold;
+        padding: 18px;
+        padding: 1.8rem;
+        background-color: #ebebeb;
+        border-left: 1px solid #d7d7d7;
+        text-align: left;
+    }
+    th:first-child{
+        border-left: 1px solid #ebebeb;
+    }
+    th:last-child{
+        border-right: 1px solid #ebebeb;
+    }
+    td{
+        background-color: #fff;
+        font-weight: 400;
+        padding: 18px;
+        padding: 1.8rem;
+        border: 1px solid #d7d7d7;
+    }
 }
