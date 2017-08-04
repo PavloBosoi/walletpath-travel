@@ -22,7 +22,7 @@
         @include fluidFontSize(14px,18px,480px,1680px,22px,16px);
         font-family: $font1;
         font-weight: bold;
-        @include ptr(margin,20 0 12);
+        @include ptr(margin,25 0 12);
         &:first-child{
             @include ptr(margin,0 0 12);
         }
@@ -49,43 +49,35 @@
 
 
     ul{
-        @include fluidFontSize(14px,16px,480px,1023px,20px,16px);
         text-align: left;
-        @include ptr(margin,30 0 30 15);
-    }
-
-    ul li ul {
         @include ptr(margin-top,15);
-        text-align: left;
     }
     ul li {
         list-style-type: none;
         position: relative;
         @include fluidFontSize(14px,18px,480px,1680px,24px,16px);
-        @include ptr(margin-top,12);
-        @include ptr(padding-left,13);
+        @include ptr(margin,12 0 0 10);
+        @include ptr(padding-left,15);
         display: block;
         text-align: left;
     }
     ul li:first-child{
-        margin: 0;
+        @include ptr(margin,0 0 0 10);
     }
     ul li:before {
         content: '';
         position: absolute;
         display: block;
-        @include ptr(top,6);
+        @include ptr(top,10);
         left: 0;
-        @include ptr(width,6);
-        @include ptr(height,6);
+        width: 5px;
+        height: 5px;
         border-radius: 50%;
-        background-color: $color1;
+        background-color: $color2;
     }
 
     ul li span{
-        display: block;
         font-weight: bold;
-        text-transform: uppercase;
     }
 
     ol {
