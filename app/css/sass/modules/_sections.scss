@@ -524,6 +524,11 @@
     }
 }
 
+/*===PHOTO-VIDEO==*/
+.form-social{
+    @include ptr(margin-top, 75);
+}
+
 /*===ACCOUNT===*/
 /*===Login===*/
 .form-login{
