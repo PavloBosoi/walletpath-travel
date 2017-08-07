@@ -31,7 +31,7 @@ $(function(){
 
 
     //formstyler
-    $/*('input,select').styler();*/
+    /*$('input,select').styler();*/
 
     $('input:not(:radio),select').styler();
 
