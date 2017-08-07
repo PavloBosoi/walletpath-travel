@@ -265,7 +265,8 @@
     .list-item{
         width: 100%;
     }
-    .form-login{
+    .form-login,
+    .form-social{
         @include ptr(width, 450);
     }
 }
@@ -331,7 +332,8 @@
     .account-text-space{
         @include ptr(margin, 50 0 0 0);
     }
-    .form-account-input{
+    .form-account-input,
+    .form-account-textarea{
         label{
             span{
                 position: static;
@@ -354,7 +356,8 @@
             }
         }
     }
-    .form-login{
+    .form-login,
+    .form-social{
         width: 100%;
     }
     .footer{
