@@ -149,4 +149,18 @@
         padding: 1.8rem;
         border: 1px solid #d7d7d7;
     }
+
+
+    .related-post{
+        h2{
+            font-family: $font1;
+            font-weight: bold;
+            @include ptr(margin,0 0 30);
+            color: $color1;
+            @include fluidFontSize(16px,24px,480px,1680px,28px,20px);
+            h1,h2,h3,h4{
+                font-weight: bold;
+            }
+        }
+    }
 }

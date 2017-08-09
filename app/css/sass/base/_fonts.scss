@@ -1,32 +1,48 @@
 /* ==|====================
    Base/Fonts
    ======================= */
+@font-face {
+    font-weight: bold;
+    font-family: "ClearSans";
+    font-style: normal;
+    src: url('../fonts/clearsans-bold-webfont.eot');
+    src: url('../fonts/clearsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/clearsans-bold-webfont.woff2') format('woff2'),
+    url('../fonts/clearsans-bold-webfont.woff') format('woff'),
+    url('../fonts/clearsans-bold-webfont.ttf') format('truetype'),
+    url('../fonts/clearsans-bold-webfont.svg#clear_sansbold') format('svg');
+}
 
 @font-face {
-    font-family: 'ClearSans';
-    src:
-        url("../fonts/ClearSans-Bold.ttf");
     font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'ClearSans';
-    src:
-        url("../fonts/ClearSans-BoldItalic.ttf");
-    font-weight: bold;
+    font-family: "ClearSans";
     font-style: italic;
+    src: url('../fonts/ClearSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ClearSans-BoldItalic.woff') format('woff'),
+    url('../fonts/ClearSans-BoldItalic.ttf')  format('truetype'),
+    url('../fonts/ClearSans-BoldItalic.svg#ClearSans-BoldItalic') format('svg');
 }
+
 @font-face {
-    font-family: 'ClearSans';
-    src:
-            url("../fonts/ClearSans-Regular.ttf");
     font-weight: normal;
+    font-family: "ClearSans";
     font-style: normal;
+    src: url('../fonts/clearsans-regular.eot');
+    src: url('../fonts/clearsans-regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/clearsans-regular.woff2') format('woff2'),
+    url('../fonts/clearsans-regular.woff') format('woff'),
+    url('../fonts/clearsans-regular.ttf') format('truetype'),
+    url('../fonts/clearsans-regular.svg#clear_sansregular') format('svg');
 }
+
 @font-face {
-    font-family: 'ClearSans';
-    src:
-            url("../fonts/ClearSans-Italic.ttf");
     font-weight: normal;
+    font-family: "ClearSans";
     font-style: italic;
+    src: url('../fonts/clearsans-italic.eot');
+    src: url('../fonts/clearsans-italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/clearsans-italic.woff2') format('woff2'),
+    url('../fonts/clearsans-italic.woff') format('woff'),
+    url('../fonts/clearsans-italic.ttf') format('truetype'),
+    url('../fonts/clearsans-italic.svg#clear_sansitalic') format('svg');
 }

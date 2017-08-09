@@ -323,6 +323,9 @@
     i,span{
         vertical-align: middle;
     }
+    span{
+        @include ptr(margin, 0 0 0 5);
+    }
 }
 .price-item-popular{
     border: 20px solid #f7f7f7;
@@ -460,9 +463,9 @@
         text-align: left;
         @include fluidFontSize(17px,36px,480px,1680px,40px,25px);
     }
-    .deep-content{
+    /*.deep-content{
         margin: 0;
-    }
+    }*/
 }
 .help-info{
     position: absolute;
@@ -601,7 +604,26 @@
         vertical-align: middle;
     }
 }
-
+.form .radio-label .radio-checked,
+.form-social-radio .wpcf7-list-item label .wpcf7-list-item-label::before{
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    @include ptr(top,-4);
+    left: 0;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid #dedede;
+    transition: $linear-f;
+}
+.form-social-radio .wpcf7-list-item label .wpcf7-list-item-label::after {
+    left: 1.1rem;
+    right: auto;
+    bottom: auto;
+    top: 0.7rem;
+}
 
 /*===ACCOUNT===*/
 /*===Login===*/
@@ -645,6 +667,7 @@ p.submit{
     }
     input[type="submit"]{
         line-height: 0;
+        @include ptr(padding,20 25);
     }
     input{
         @include ptr(padding,10 30);
@@ -745,6 +768,10 @@ p.submit{
 }
 .account-slink{
     @include ptr(margin, 10 0 0 0);
+}
+.form-small{
+    @include ptr(width, 580);
+    margin: 0 auto;
 }
 /*===Update-Billing===*/
 .update-billing{

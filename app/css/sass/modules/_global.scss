@@ -95,6 +95,14 @@
     @include ptr(padding-bottom, 100);
     position: relative;
 }
+.deep-feature{
+    &+.feature{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+}
 .load-more{
     text-align: center;
 }
